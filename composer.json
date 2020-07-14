@@ -1,0 +1,20 @@
+{
+    "name": "vrielingsoftwareontwikkeling/laravel-google-chat",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vrieling Softwaare Ontwikkeling",
+            "email": "info@vrielingsoftwareontwikkeling.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VrielingSoftwareOntwikkeling\\LaravelGoogleChat\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "monolog/monolog": "^2.0"
+    }
+}
