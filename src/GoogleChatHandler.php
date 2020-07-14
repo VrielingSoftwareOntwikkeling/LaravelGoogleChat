@@ -27,6 +27,6 @@ class GoogleChatHandler extends AbstractProcessingHandler
      */
     protected function getDefaultFormatter()
     {
-        return;
+        return new GoogleChatFormatter();
     }
 }
