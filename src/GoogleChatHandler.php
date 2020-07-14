@@ -3,6 +3,7 @@
 
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
+use SjorsO\Gobble\Facades\Gobble;
 
 class GoogleChatHandler extends AbstractProcessingHandler
 {
@@ -13,7 +14,12 @@ class GoogleChatHandler extends AbstractProcessingHandler
 
     protected function write(array $record): void
     {
-        var_dump($record);
+        Gobble::post(env('LOG_GOOGLE_WEBHOOK_URL'), [
+            'headers' => [
+                'Content-Type' => 'application/json'
+            ],
+            'body' => json_encode($record),
+        ]);
     }
     /**
      * {@inheritDoc}

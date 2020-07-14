@@ -8,8 +8,7 @@ class GoogleChatSetup
     public function __invoke(array $config): Logger
     {
         $logger = new Logger('custom');
-        $logger->pushHandler(new LogHandler());
-        $logger->pushProcessor(new LogProcessor());
+        $logger->pushHandler(new GoogleChatHandler());
         return $logger;
     }
 }
