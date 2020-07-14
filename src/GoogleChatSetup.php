@@ -10,7 +10,6 @@ class GoogleChatSetup
     {
         $logger = new Logger('custom');
         $logger->pushHandler(new GoogleChatHandler());
-        $logger->pushProcessor(new GoogleChatProcessor());
         return $logger;
     }
 }
